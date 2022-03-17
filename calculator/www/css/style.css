@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+    color: white;
+}
+
+body {
+    background-color: #041C32;
+}
+
+table {
+    position: absolute;
+    bottom: 0;
+    
+    font-size: 25px;
+    
+    width: 100%;
+    display: table;
+}
+
+td {
+    padding: 15px;
+    
+    background-color: #064663;
+    
+    text-align: center;
+    
+    border: 1px solid #04293A;
+}
+
+td.c {
+    background-color: #277599;
+}
+
+td.ope {
+    background-color: #053951;
+}
+
+td.equ {
+    background-color: #04293A;
+}
