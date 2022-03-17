@@ -42,3 +42,21 @@ td.ope {
 td.equ {
     background-color: #04293A;
 }
+
+.num {
+    width: 100%;
+    
+    font-size: 50px;
+    background-color: #041C32;
+    
+    outline: none;
+    border: none;
+    
+    text-align: right;
+}
+
+p.pre-result {
+    text-align: right;
+    
+    font-size: 30px;
+}
