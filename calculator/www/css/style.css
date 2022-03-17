@@ -57,8 +57,9 @@ td.equ {
 
 p.pre-result {
     text-align: right;
-    
     font-size: 25px;
     
     margin: 10px;
+    
+    color: lightgray;
 }

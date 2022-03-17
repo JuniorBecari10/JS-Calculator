@@ -3,7 +3,7 @@ var pre_result = document.getElementsByClassName("pre-result")[0];
 
 function addNum(s) {
     num_input.value += s;
-    pre_result = calc(num_input.value)
+    pre_result.innerHTML = calc(num_input.value)
 }
 
 function clear() {
@@ -15,6 +15,7 @@ function calc(c) {
     try {
         return eval(c);
     } catch (error) {
+        console.error(error);
         return "";
     }
 }
