@@ -13,6 +13,8 @@ function clear() {
 
 function calc(c) {
     try {
+        //c = c.replace("&#247;", "/");
+        
         return eval(c);
     } catch (error) {
         console.error(error);
