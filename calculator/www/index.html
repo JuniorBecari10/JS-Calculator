@@ -11,12 +11,12 @@
     </head>
     <body>
         <input type="text" class="num"></input>
-        <p class="pre-result">10</p>
+        <p class="pre-result"></p>
         
         <table>
             <tr>
-                <a href=""><td class="c">C</td></a>
-                <a href=""><td class="ope">&#247;</td>
+                <a href=""><td onclick="clear()" class="c">C</td></a>
+                <a href=""><td onclick="addNum('&#247;')" class="ope">&#247;</td>
                 <a href=""><td class="ope">&#215;</td>
                 <a href=""><td class="ope">&#8678;</td>
             </tr>
@@ -45,5 +45,7 @@
                 <a href=""><td class="equ">=</td></a>
             </tr>
         </table>
+        
+        <script src="js/script.js"></script>
     </body>
 </html>
