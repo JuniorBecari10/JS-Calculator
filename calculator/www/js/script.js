@@ -12,11 +12,15 @@ backBtn.onclick = back;
 function addNum(s) {
     num_input.value += s;
     pre_result.innerHTML = calc(num_input.value);
+    
+    num_input.scroll();
 }
 
 function back() {
     num_input.value = num_input.value.substring(0, num_input.value.length - 1);
     //pre_result.innerHTML = pre_result.innerHTML.substring(0, pre_result.innerHTML.length - 1);
+    
+    pre_result.innerHTML = calc(num_input.value);
 }
 
 function clear() {
@@ -55,6 +59,7 @@ function calc(c) {
     try {
         c = c.replace("÷", "/"); // division sign (%)
         c = c.replace("×", "*"); // mult sign (x)
+        c = c.replace("^", "**"); // power
         
         return eval(c);
     } catch (error) {
