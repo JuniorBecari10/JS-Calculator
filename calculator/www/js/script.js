@@ -16,7 +16,7 @@ function addNum(s) {
 
 function back() {
     num_input.value = num_input.value.substring(0, num_input.value.length - 1);
-    pre_result.innerHTML = pre_result.innerHTML.substring(0, pre_result.innerHTML.length - 1);
+    //pre_result.innerHTML = pre_result.innerHTML.substring(0, pre_result.innerHTML.length - 1);
 }
 
 function clear() {
@@ -29,6 +29,26 @@ function equal() {
     
     num_input.value = pres;
     pre_result.innerHTML = "";
+}
+
+function insertPar() {
+    let open = 0, close = 0;
+    
+    for (let s of num_input.value) {
+        if (s === "(")
+            open++;
+        
+        else if (s === ")")
+            close++;
+    }
+    
+    if (open === close) {
+        addNum("(");
+        
+        return;
+    }
+    
+    addNum(open < close ? "(" : ")")
 }
 
 function calc(c) {
