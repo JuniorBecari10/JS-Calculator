@@ -53,7 +53,8 @@ function insertPar() {
 
 function calc(c) {
     try {
-        //c = c.replace("&#247;", "/");
+        c = c.replace("÷", "/"); // division sign (%)
+        c = c.replace("×", "*"); // mult sign (x)
         
         return eval(c);
     } catch (error) {
