@@ -10,17 +10,31 @@ equalBtn.onclick = equal;
 backBtn.onclick = back;
 
 function addNum(s) {
-    num_input.value += s;
+    //let selstart = num_input.selectionStart == 0 ? num_input.length : 0;
+    
+    num_input.value += s;// insertChar(num_input.value, s, selstart);
     pre_result.innerHTML = calc(num_input.value);
     
     num_input.scroll();
 }
 
 function back() {
-    num_input.value = num_input.value.substring(0, num_input.value.length - 1);
+    //let selstart = num_input.selectionStart;
+    
+    num_input.value = removeChar(num_input.value, num_input.selectionStart);//num_input.value.substring(0, num_input.value.length - 1);
     //pre_result.innerHTML = pre_result.innerHTML.substring(0, pre_result.innerHTML.length - 1);
     
     pre_result.innerHTML = calc(num_input.value);
+    
+    //num_input.selectionStart = selstart;
+}
+
+function removeChar(str, idx) {
+    return str.slice(0, idx - 1) + str.slice(idx);
+}
+
+function insertChar(str, chr, idx) {
+    return str.slice(0, idx - 1) + chr + str.slice(idx);
 }
 
 function clear() {
