@@ -10,6 +10,8 @@ equalBtn.onclick = equal;
 backBtn.onclick = back;
 
 function addNum(s) {
+    if (calc(num_input.value + s) == "0") return;
+    
     //let selstart = num_input.selectionStart == 0 ? num_input.length : 0;
     
     num_input.value += s;// insertChar(num_input.value, s, selstart);
