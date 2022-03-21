@@ -43,6 +43,8 @@ function clear() {
 }
 
 function equal() {
+    if (num_input .value === "") return;
+    
     let pres = pre_result.innerHTML;
     
     num_input.value = pres;

@@ -71,3 +71,7 @@ p.pre-result {
     
     color: lightgray;
 }
+
+input {
+    pointer-events: none;
+}
