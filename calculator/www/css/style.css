@@ -67,11 +67,14 @@ p.pre-result {
     text-align: right;
     font-size: 25px;
     
-    margin: 10px;
+    margin: 5px;
+    margin-top: 0;
     
     color: lightgray;
 }
 
 input {
     pointer-events: none;
+    
+    padding: 5px;
 }

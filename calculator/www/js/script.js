@@ -77,7 +77,7 @@ function calc(c) {
     try {
         c = c.replace("÷", "/"); // division sign (%)
         c = c.replace("×", "*"); // mult sign (x)
-        c = c.replace("^", "**"); // power
+        c = c.replace("↑", "**"); // power
         
         return eval(c);
     } catch (error) {
