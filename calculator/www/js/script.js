@@ -16,6 +16,10 @@ function addNum(s) {
     
     for (let op of ops) {
         if (s === op && num_input.value === "") return;
+        
+        for (let opp of ops) {
+            if (s === op && opp === num_input.value.charAt(num_input.value.length - 1)) return;
+        }
     }
     
     //let selstart = num_input.selectionStart == 0 ? num_input.length : 0;
