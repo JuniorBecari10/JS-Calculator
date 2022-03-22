@@ -79,7 +79,8 @@ function calc(c) {
         c = c.replace("×", "*"); // mult sign (x)
         c = c.replace("↑", "**"); // power
         
-        return eval(c);
+        console.log(eval(c));
+        return eval(c) !== undefined ? eval(c) : "";
     } catch (error) {
         console.error(error);
         return "";
