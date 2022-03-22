@@ -16,8 +16,6 @@ function addNum(s) {
     
     num_input.value += s;// insertChar(num_input.value, s, selstart);
     pre_result.innerHTML = calc(num_input.value);
-    
-    num_input.scroll();
 }
 
 function back() {

@@ -23,14 +23,14 @@ table {
     position: absolute;
     bottom: 0;
     
-    font-size: 25px;
+    font-size: 28px;
     
     width: 100%;
     display: table;
 }
 
 td {
-    padding: 3.75vh 15px;
+    padding: 3.50vh 15px;
     
     background-color: #064663;
     
@@ -73,6 +73,8 @@ p.pre-result {
     color: lightgray;
 }
 
-input {
+.num {
     padding: 5px;
+    
+    border-bottom: 5px solid #04293A;
 }
