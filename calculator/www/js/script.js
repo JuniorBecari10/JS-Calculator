@@ -12,10 +12,13 @@ equalBtn.onclick = equal;
 backBtn.onclick = back;
 
 function addNum(s) {
-    if (calc(num_input.value + s) == "0") return;
+    //if (calc(num_input.value + s) == "0") return;
     
     for (let op of ops) {
-        if (s === op && num_input.value === "") return;
+        if (s === op && s !== "-" && num_input.value === "") return;
+        
+        /*if (s !== op && num_input.value.charAt(num_input.value.length - 1) === "%")
+            s = "*" + s;*/
         
         for (let opp of ops) {
             if (s === op && opp === num_input.value.charAt(num_input.value.length - 1)) return;
@@ -85,9 +88,13 @@ function calc(c) {
     try {
         c = c.replace("÷", "/"); // division sign (%)
         c = c.replace("×", "*"); // mult sign (x)
-        c = c.replace("↑", "**"); // power (up arrow)
+        c = c.replace("↑", "^"); // power (up arrow)
         
-        return eval(c) !== undefined ? eval(c) : "";
+        //let comp = math.compile(c)
+        let ev = math.evaluate(c);
+        
+        return math.evaluate(c) 
+        return ev !== undefined ? ev : "";
     } catch (error) {
         console.error(error);
         return "";
