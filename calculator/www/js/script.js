@@ -5,12 +5,18 @@ const clearBtn = document.getElementById("clear");
 const equalBtn = document.getElementById("equal");
 const backBtn = document.getElementById("back");
 
+const ops = ["+", "-", "×", "÷"];
+
 clearBtn.onclick = clear;
 equalBtn.onclick = equal;
 backBtn.onclick = back;
 
 function addNum(s) {
     if (calc(num_input.value + s) == "0") return;
+    
+    for (let op of ops) {
+        if (s === op && num_input.value === "") return;
+    }
     
     //let selstart = num_input.selectionStart == 0 ? num_input.length : 0;
     
@@ -75,7 +81,7 @@ function calc(c) {
     try {
         c = c.replace("÷", "/"); // division sign (%)
         c = c.replace("×", "*"); // mult sign (x)
-        c = c.replace("↑", "**"); // power
+        c = c.replace("↑", "**"); // power (up arrow)
         
         return eval(c) !== undefined ? eval(c) : "";
     } catch (error) {
