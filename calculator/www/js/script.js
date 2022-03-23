@@ -34,7 +34,7 @@ function addNum(s) {
 function back() {
     //let selstart = num_input.selectionStart;
     
-    num_input.value = removeChar(num_input.value, num_input.selectionStart);//num_input.value.substring(0, num_input.value.length - 1);
+    num_input.value = removeChar(num_input.value, num_input.value.length);//num_input.value.substring(0, num_input.value.length - 1);
     //pre_result.innerHTML = pre_result.innerHTML.substring(0, pre_result.innerHTML.length - 1);
     
     pre_result.innerHTML = calc(num_input.value);
@@ -93,7 +93,7 @@ function calc(c) {
         //let comp = math.compile(c)
         let ev = math.evaluate(c);
         
-        return math.evaluate(c) 
+        //return math.evaluate(c) 
         return ev !== undefined ? ev : "";
     } catch (error) {
         console.error(error);
