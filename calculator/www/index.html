@@ -13,7 +13,11 @@
         <textarea type="text" class="num" rows="3"></textarea>
         <p class="pre-result"></p>
         
-        <table>
+        <div class="btns">
+            <span onclick="setPages(true)">&#8592;</span>
+            <span onclick="setPages(false)">&#8594;</span>
+        </div>
+        <table id="pg1">
             <tr>
                 <a href=""><td id="clear" class="c">C</td></a>
                 <a href=""><td onclick="addNum('&#247;')" class="ope">&#247;</td>
@@ -43,6 +47,38 @@
                 <a href=""><td onclick="addNum('.')">.</td></a>
                 <a href=""><td onclick="addNum('%')">%</td></a>
                 <!--<a href=""><td onclick="addNum('&#8593;(')">x<sup>y</sup></td></a>-->
+                <a href=""><td id="equal" class="equ">=</td></a>
+            </tr>
+        </table>
+        <table id="pg2">
+            <tr>
+                <a href=""><td id="clear" class="c">C</td></a>
+                <a href=""><td onclick="addNum('&#8730;(')">&#8730;</td></a>
+                <a href=""><td onclick="addNum('&#8731;(')">&#8731;</td></a>
+                <a href=""><td id="back" class="ope">&#8678;</td>
+            </tr>
+            <tr>
+                <a href=""><td onclick="addNum('sin(')">sin</td></a>
+                <a href=""><td onclick="addNum('cos(')">cos</td></a>
+                <a href=""><td onclick="addNum('tan(')">tan</td></a>
+                <a href=""><td onclick="addNum('log(')">log</td></a>
+            </tr>
+            <tr>
+                <a href=""><td onclick="addNum('ceil(')">ceil</td></a>
+                <a href=""><td onclick="addNum('floor(')">flr</td></a>
+                <a href=""><td onclick="addNum('round(')">rnd</td></a>
+                <a href=""><td onclick="addNum('ln(')">ln</td></a>
+            </tr>
+            <tr>
+                <a href=""><td onclick="addNum('1&#247;')">1 &#247;</td></a>
+                <a href=""><td onclick="addNum('e')">e</td></a>
+                <a href=""><td onclick="addNum('π')">π</td></a>
+                <a href=""><td onclick="insertPar()">( )</td></a>
+            </tr>
+            <tr>
+                <a href=""><td onclick="addNum('abs(')">|x|</td></a>
+                <a href=""><td onclick="addNum('&#8593;(2)')">x<sup>2</sup></td></a>
+                <a href=""><td onclick="addNum('&#8593;(')">x<sup>y</sup></td></a>
                 <a href=""><td id="equal" class="equ">=</td></a>
             </tr>
         </table>

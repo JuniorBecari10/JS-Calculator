@@ -15,6 +15,10 @@
     font-family: "Sifonn Pro";
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     background-color: #041C32;
 }
@@ -22,6 +26,8 @@ body {
 table {
     position: absolute;
     bottom: 0;
+    
+    table-layout: fixed;
     
     font-size: 28px;
     
@@ -77,4 +83,25 @@ p.pre-result {
     margin-top: 0;
     
     color: lightgray;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    font-size: 30px;
+    
+    margin-top: 10px;
+}
+
+.btns * {
+    background-color: #064663;
+    flex-grow: 1;
+    
+    text-align: center;
+}
+
+.btns *:hover {
+    background-color: #053951;
 }

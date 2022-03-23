@@ -5,11 +5,34 @@ const clearBtn = document.getElementById("clear");
 const equalBtn = document.getElementById("equal");
 const backBtn = document.getElementById("back");
 
+const pg1 = document.getElementById("pg1");
+const pg2 = document.getElementById("pg2");
+
 const ops = ["+", "-", "×", "÷"];
+var page1 = true;
+
+validatePages();
 
 clearBtn.onclick = clear;
 equalBtn.onclick = equal;
 backBtn.onclick = back;
+
+function setPages(b) {
+    page1 = b;
+    
+    validatePages();
+}
+
+function validatePages() {
+    if (page1) {
+        pg1.style.display = "";
+        pg2.style.display = "none";
+    }
+    else {
+        pg1.style.display = "none";
+        pg2.style.display = "";
+    }
+}
 
 function addNum(s) {
     //if (calc(num_input.value + s) == "0") return;
@@ -32,6 +55,7 @@ function addNum(s) {
 }
 
 function back() {
+console.log("a");
     //let selstart = num_input.selectionStart;
     
     num_input.value = removeChar(num_input.value, num_input.value.length);//num_input.value.substring(0, num_input.value.length - 1);
@@ -89,6 +113,11 @@ function calc(c) {
         c = c.replace("÷", "/"); // division sign (%)
         c = c.replace("×", "*"); // mult sign (x)
         c = c.replace("↑", "^"); // power (up arrow)
+        
+        c = c.replace("√", "sqrt"); // sqrt
+        c = c.replace("∛", "cbrt"); // cbrt
+        
+        c = c.replace("π", "pi");
         
         //let comp = math.compile(c)
         let ev = math.evaluate(c);
