@@ -5,6 +5,10 @@ const clearBtn = document.getElementById("clear");
 const equalBtn = document.getElementById("equal");
 const backBtn = document.getElementById("back");
 
+const clearBtn2 = document.getElementById("clear2");
+const equalBtn2 = document.getElementById("equal2");
+const backBtn2 = document.getElementById("back2");
+
 const pg1 = document.getElementById("pg1");
 const pg2 = document.getElementById("pg2");
 
@@ -16,6 +20,10 @@ validatePages();
 clearBtn.onclick = clear;
 equalBtn.onclick = equal;
 backBtn.onclick = back;
+
+clearBtn2.onclick = clear;
+equalBtn2.onclick = equal;
+backBtn2.onclick = back;
 
 function setPages(b) {
     page1 = b;
